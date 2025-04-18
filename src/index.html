@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./output.css" rel="stylesheet">
+    <title>AgendaAi</title>
+    </head>
+    <body>
+        <header class="bg-blue-500 p-6">
+            <div class="container mx-auto flex justify-between items-center">
+                <h1 class="text-3xl font-bold text-white">AgendaAi</h1>
+                <nav>
+                    <ul class="flex space-x-4">
+                        <li><a href="#" class="text-white hover:text-blue-300">Agendar serviço</a></li>
+                        <li><a href="#" class="text-white hover:text-blue-300">Editar serviço</a></li>
+                    </ul>
+                </nav>
+            </div>
+                </header>
+                <section class="py-12">
+                    <div class="container ms-auto text-center space-y-8">
+                        <h2 class="text-4xl font-bold text-gray-700">Agendamento de serviço</h2>
+                        <p class="text-gray-600 text-xl">Agende aqui o serviço desejado</p>
+                    </div>
+                <form action="#" method="POST" class="space-y-6">
+                        <input type="text" class="block w-full p-4 text-lg rounded-md border-2 border-gray-308" placeholder="Seu nome" required/>
+                        <input type="number" class="block w-full p-4 text-lg rounded-md border-2 border-gray-308" placeholder="Seu cpf" required/>
+                        <input type="text" class="block w-full p-4 text-lg rounded-md border-2 border-gray-308" rows="4" placeholder="modelo do veiculo" required/>
+                        <input type="text" class="block w-full p-4 text-lg rounded-md border-2 border-gray-308" rows="4" placeholder="placa do veiculo" required/>
+                        <div class="servico disponiveis"> Serviço Disponivel<br>
+                            <strong>Conserto de veiculos</strong>
+                            <div class="checkbox">
+                              <label>
+                                <input type="checkbox" name="Conserto de Veiculos" /> Selecionar serviço
+                              </label>
+                            </div>
+                          </div>
+                          
+                          <div class="servico indisponivel">
+                            <strong>Lavagem</strong>
+                            <div class="checkbox">
+                              <label>
+                                <input type="checkbox" disabled /> Serviço temporariamente indisponível
+                              </label>
+                            </div>
+                          </div>
+                         
+                        <button type="submit" class="w-full py-3 px-6 text-lg text-white bg-blue-500 rounded-md hover:bg-blue-600 transition-all">
+                            Agendar
+                          </button>
+                        
+                    </form>
+                   
+                <footer class="bg-blue-500 p-6 mt-12">
+                    <div class="container mx-auto text-center">
+                        <p class="text-white text-sm">© 2025 AgendaAi - All Rights Reserved.</p>
+                        </div>
+                    </footer>
+                
+                <script src="https://cdn.taiwindess.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+    </body>
+    </html>
