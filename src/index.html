@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./styles.css" />
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <title>Agenda.aí</title>
+</head>
+
+<body class="min-h-screen bg-gray-100 flex flex-col justify-between">
+
+  <nav class="bg-blue-800 py-4 shadow-lg">
+    <div class="flex justify-center">
+      <div class="flex items-center space-x-4">
+        <h1 class="text-4xl font-bold text-white">Agenda.aí</h1>
+        <span class="text-white">Seu sistema de agendamento e gestão para oficinas automotivas.</span>
+      </div>
+    </div>
+  </nav>
+
+  <main class="flex-grow w-full max-w-6xl mx-auto mt-8 p-4 bg-white shadow-lg rounded-lg ">
+
+    <div>
+      <h2 class="text-3xl text-zinc-800 font-bold text-center mt-8">Bem-vindo ao Agenda.aí</h2>
+      <p class="text-center text-zinc-700 mt-4">Gerencie seus agendamentos de forma simples e eficiente.</p>
+    </div>
+
+    <div class="w-[35%] mt-8 mx-auto flex flex-col items-center space-y-4">
+      <input class="w-full border rounded-md p-2" type="text" placeholder="Nome do cliente" />
+      <input class="w-full border rounded-md p-2" type="text" placeholder="Telefone do cliente" />
+      <div class="flex space-x-4 w-full">
+        <input class="w-full border rounded-md p-2" type="text" placeholder="Modelo do veículo" />
+        <input class="w-full border rounded-md p-2" type="text" placeholder="Placa do veículo" />
+      </div>
+      <div class="flex space-x-4 w-full">
+        <input class="w-full border rounded-md p-2" type="date" placeholder="Data do agendamento" />
+        <input class="w-full border rounded-md p-2" type="time" placeholder="Hora do agendamento" />
+      </div>
+      <select class="w-full border rounded-md p-2" type="text" placeholder="Serviços">
+        <option value="" disabled selected>Selecione um serviço</option>
+        <option value="lavagem">Lavagem</option>
+        <option value="manutencao">Manutenção</option>
+        <option value="lavagem_manutencao">Lavagem + Manutenção</option>
+      </select>
+      <input class="w-full border rounded-md p-2" type="number" placeholder="Valor do serviço" />
+      <button
+        class="w-full bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-500 cursor-pointer">Adicionar</button>
+    </div>
+
+    <div>
+      <h2 class="text-3xl text-zinc-800 font-bold text-center mt-8">Agendamentos</h2>
+      <table class="w-full mt-4 border-collapse border border-gray-300">
+        <thead>
+          <tr class="bg-gray-200">
+            <th class="border border-gray-300 p-2">Cliente</th>
+            <th class="border border-gray-300 p-2">Telefone</th>
+            <th class="border border-gray-300 p-2">Veículo</th>
+            <th class="border border-gray-300 p-2">Data</th>
+            <th class="border border-gray-300 p-2">Hora</th>
+            <th class="border border-gray-300 p-2">Serviço</th>
+            <th class="border border-gray-300 p-2">Valor</th>
+          </tr>
+        </thead>
+        <tbody id="agendamentos-list">
+          <!-- Os agendamentos serão inseridos aqui dinamicamente -->
+        </tbody>
+      </table>
+
+  </main>
+
+  <footer class="bg-blue-800  py-4 mt-8 shadow-lg">
+    <div class="flex justify-center">
+      <p class="text-white">© 2025 Agenda.aí. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+</body>
+
+</html>
