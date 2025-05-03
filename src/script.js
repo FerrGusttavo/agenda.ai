@@ -1,15 +1,15 @@
 
-  const botaoAdicionar = document.querySelector("button");
+  const botaoAgendar = document.querySelector("button");
   const tabela = document.getElementById("agendamentos-list");
 
-  // Carrega os agendamentos salvos do localStorage ao iniciar
+  
   window.addEventListener("load", () => {
     const agendamentosSalvos = JSON.parse(localStorage.getItem("agendamentos")) || [];
     agendamentosSalvos.forEach(adicionarNaTabela);
   });
 
-  // Evento de clique no botão "Adicionar"
-  botaoAdicionar.addEventListener("click", () => {
+  
+  botaoAgendar.addEventListener("click", () => {
     const nome = document.querySelector('input[placeholder="Nome do cliente"]').value;
     const telefone = document.querySelector('input[placeholder="Telefone do cliente"]').value;
     const modelo = document.querySelector('input[placeholder="Modelo do veículo"]').value;
@@ -37,11 +37,11 @@
     adicionarNaTabela(novoAgendamento);
     salvarNoLocalStorage(novoAgendamento);
 
-    // Limpa os campos
+    
     document.querySelectorAll("input, select").forEach(el => el.value = "");
   });
 
-  // Função para adicionar um agendamento na tabela
+  
   function adicionarNaTabela(agendamento) {
     const novaLinha = document.createElement("tr");
     novaLinha.innerHTML = `
@@ -56,7 +56,7 @@
     tabela.appendChild(novaLinha);
   }
 
-  // Função para salvar no localStorage
+  
   function salvarNoLocalStorage(agendamento) {
     const agendamentos = JSON.parse(localStorage.getItem("agendamentos")) || [];
     agendamentos.push(agendamento);
